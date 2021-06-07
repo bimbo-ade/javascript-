@@ -1,0 +1,28 @@
+*{
+  margin:0;
+  padding: 0;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(222, 190, 45, 0.541);
+}
+
+h1{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+p{
+  font-size: 80px;
+  margin-left: 150px;
+}
+.btn{
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  outline: none;
+}
