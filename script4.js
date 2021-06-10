@@ -14,17 +14,20 @@ const reviews = [
   {
     Fname: "jax",
     job: "doctor",
+    color: "brown",
     desc: "i am a person who loves to heal all day Temporibusdolore amet maiores reprehenderit accusamus, nobis animi placeat odit assumenda et!",
   },
   {
     Fname: "john Sayrah",
     job: "crafty",
+    color: "blue",
     desc: "i am a person who loves to cook all day. Temporibusdolore amet maiores reprehenderit accusamus, nobis animi placeat odit assumenda et!",
   },
 
   {
     Fname: "Damah",
     job: "cactic",
+    color: "red",
     desc: "i am a person who loves to cook all day. Temporibusdolore amet maiores reprehenderit accusamus, nobis animi placeat odit assumenda et!",
   }
 
@@ -36,19 +39,22 @@ const random = document.getElementById('random');
 const author = document.getElementById('author');
 const job = document.getElementById('job');
 const desc = document.getElementById('desc');
+const div = document.querySelector('.cont');
 
 let currentItem = 0;
 
 
-window.addEventListener("DOMContentLoaded", function () {
-  showPerson(currentItem);        //showPerson()
-})
+//window.addEventListener("DOMContentLoaded", function () {
+//showPerson(currentItem);        //showPerson()
+//})
 
 function showPerson(person) {      //function showPerson()    theres no need to pass parameter 'person'
   const item = reviews[person];      // const item = reviews[currentItem]
   author.textContent = item.Fname;
   job.textContent = item.job;
   desc.textContent = item.desc;
+  div.style.backgroundColor = item.color
+
 
 }
 
@@ -58,7 +64,7 @@ next.addEventListener('click', function () {
     currentItem = 0;
   }
   showPerson(currentItem);
-
+  document.body.style.backgroundColor = 'green';
 })
 
 prev.addEventListener('click', function () {
@@ -67,12 +73,15 @@ prev.addEventListener('click', function () {
     currentItem = reviews.length - 1;
   }
   showPerson(currentItem);
-
+  document.body.style.backgroundColor = "yellow";
+  //div.style.backgroundColor = "purple";
 })
 
 random.addEventListener('click', function () {
   currentItem = randomNumber();
   showPerson(currentItem);
+  document.body.style.backgroundColor = "pink";
+  //div.style.backgroundColor = " gold";
 })
 
 
